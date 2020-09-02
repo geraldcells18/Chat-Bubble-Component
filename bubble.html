@@ -5,20 +5,32 @@
         <style>
             html,
             body {
+                margin: 0;
                 width: 100%;
                 height: 100%;
-                margin: 0;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            h1 {
+                margin: 0;
+                padding-top: 10px;
+                text-align: center;
+                color: #494949;
+            }
+
+            .card {
+                border-radius: .25rem;
+                background-clip: border-box;
+                border: 1px solid #00000020;
             }
 
             .con {
                 width: 300px;
-                padding: 0px;
-                height: 400px;
-                padding: .5rem;
+                height: auto;
                 display: flex;
+                padding: .5rem;
+                border-radius: 5px;
                 flex-direction: column;
-                border: 1px solid #d8d8d8;
             }
 
             .middle {
@@ -29,10 +41,10 @@
             }
 
             .con>.mess__holder {
-                height: 37px;
+                height: 27px;
                 display: flex;
-                padding: 0 16px;
                 max-width: 100%;
+                padding: 6px 16px;
                 width: fit-content;
                 margin-bottom: 2px;
                 align-self: flex-end;
@@ -61,13 +73,10 @@
     </head>
 
     <body>
-
-        <div class="con middle">
+        <h1>Chat Bubbles Example</h1>
+        <div class="con middle card">
             <div class="mess__holder">
                 <p>The first paragraph.</p>
-            </div>
-            <div class="mess__holder">
-                <p>The middle paragraph here.</p>
             </div>
             <div class="mess__holder">
                 <p>The middle paragraph here.</p>

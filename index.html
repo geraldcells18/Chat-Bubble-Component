@@ -2,6 +2,8 @@
 <html>
 
     <head>
+        <title>Chat Bubble Component</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             html,
             body {
@@ -18,17 +20,18 @@
                 color: #494949;
             }
 
-            .card {
-                border-radius: .25rem;
-                background-clip: border-box;
-                border: 1px solid #00000020;
+            .main {
+                width: 300px;
+                height: 350px;
+                padding: .3rem;
+                overflow-y: scroll;
             }
 
-            .con {
-                width: 300px;
+            .bubbles__con {
+                width: 100%;
                 height: auto;
                 display: flex;
-                padding: .5rem;
+                margin-top: 5px;
                 border-radius: 5px;
                 flex-direction: column;
             }
@@ -40,13 +43,13 @@
                 transform: translate(-50%, -50%);
             }
 
-            .con>.mess__holder {
-                height: 27px;
+            .bubbles__con>.mess__holder {
                 display: flex;
-                max-width: 100%;
-                padding: 6px 16px;
+                max-width: 80%;
+                padding: 9px 16px;
                 width: fit-content;
                 margin-bottom: 2px;
+                height: fit-content;
                 align-self: flex-end;
                 background: #4ccec3;
                 flex-direction: column;
@@ -54,40 +57,114 @@
                 border-radius: 50px 18px 18px 50px;
             }
 
-            .con>.mess__holder:first-child {
-                background: #4ccec3;
-                border-radius: 50px 45px 12px 50px;
+            .mess__holder>p {
+                margin: 0;
+                color: #ffff;
+                font-size: 16px;
+                text-align: left;
+                text-justify: auto;
             }
 
-            .con>.mess__holder:nth-last-child(1) {
+            .sender>p {
+                color: #363636 !important;
+            }
+
+            .card {
+                border-radius: .25rem;
+                background-clip: border-box;
+                border: 1px solid #00000017;
+            }
+
+            .sender {
+                align-self: flex-start !important;
+                background-color: #eeeeee !important;
+                border-radius: 18px 50px 50px 18px !important;
+            }
+
+            .bubbles__con>.mess__holder:nth-last-child(1) {
                 background: #4ccec3;
                 border-radius: 50px 12px 45px 50px;
             }
 
-            .mess__holder>p {
-                margin: 0;
-                color: #ffff;
-                font-size: 15px;
+            .bubbles__con>.mess__holder:first-child {
+                background: #4ccec3;
+                border-radius: 50px 45px 12px 50px;
+            }
+
+            .bubbles__con>.mess__holder.sender:first-child {
+                border-radius: 50px 45px 50px 12px !important;
+            }
+
+            .bubbles__con>.mess__holder.sender:nth-last-child(1) {
+                border-radius: 12px 50px 50px 45px !important;
+            }
+
+            .long__messages {
+                padding: 7px 12px !important;
+                border-radius: 16px !important;
             }
         </style>
     </head>
 
     <body>
-        <h1>Chat Bubbles Example</h1>
-        <div class="con middle card">
-            <div class="mess__holder">
-                <p>The first paragraph.</p>
+        <h1>Chat Bubbles Component</h1>
+
+        <div class="main card middle">
+            <div class="bubbles__con">
+                <div class="mess__holder">
+                    <p>The first paragraph.</p>
+                </div>
+                <div class="mess__holder">
+                    <p>The middle paragraph here.</p>
+                </div>
+                <div class="mess__holder">
+                    <p>The middle paragraph here.</p>
+                </div>
+                <div class="mess__holder">
+                    <p>The last paragraph.</p>
+                </div>
             </div>
-            <div class="mess__holder">
-                <p>The middle paragraph here.</p>
+
+
+            <div class="bubbles__con">
+                <div class="mess__holder sender">
+                    <p>The first paragraph.</p>
+                </div>
+                <div class="mess__holder sender">
+                    <p>The here.</p>
+                </div>
+                <div class="mess__holder sender">
+                    <p>Nandyan ba si jillian? paki sabi may ibibigay ako</p>
+                </div>
             </div>
-            <div class="mess__holder">
-                <p>The middle paragraph here.</p>
+
+            <div class="bubbles__con">
+                <div class="mess__holder">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="mess__holder long__messages">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a velit nulla. Curabitur eleifend
+                        consectetur
+                        fringilla. Proin metus nisl, tempor at purus hendrerit, aliquam dapibus nisi. Phasellus tempor
+                        iaculis
+                        facilisis. Mauris dapibus rutrum elit, sed aliquet elit vestibulum quis. Phasellus consequat
+                        enim a ipsum
+                        euismod, finibus laoreet orci bibendum. Proin vestibulum et leo non rhoncus. Maecenas cursus vel
+                        erat non
+                        mollis.</p>
+                </div>
+                <div class="mess__holder">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
             </div>
-            <div class="mess__holder">
-                <p>The last paragraph.</p>
-            </div>
+
         </div>
+
+        <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a velit nulla. Curabitur eleifend consectetur
+        fringilla. Proin metus nisl, tempor at purus hendrerit, aliquam dapibus nisi. Phasellus tempor iaculis
+        facilisis. Mauris dapibus rutrum elit, sed aliquet elit vestibulum quis. Phasellus consequat enim a ipsum
+        euismod, finibus laoreet orci bibendum. Proin vestibulum et leo non rhoncus. Maecenas cursus vel erat non
+        mollis. -->
 
     </body>
 

@@ -70,14 +70,14 @@
                 border-radius: 50px 18px 18px 50px;
             }
 
-            .mess__holder>p {
+            .mess__holder>span {
                 margin: 0;
                 color: #ffff;
                 font-size: 15px;
                 text-align: left;
             }
 
-            .sender>p {
+            .sender>span {
                 color: #363636 !important;
             }
 
@@ -96,21 +96,21 @@
             .bubbles__con>.mess__holder:nth-last-child(1) {
                 background: #4ccec3;
                 margin-bottom: 0 !important;
-                border-radius: 50px 12px 45px 50px;
+                border-radius: 50px 6px 60px 50px;
             }
 
             .bubbles__con>.mess__holder:first-child {
                 background: #4ccec3;
-                border-radius: 50px 45px 12px 50px;
+                border-radius: 50px 60px 6px 50px;
             }
 
             .bubbles__con>.mess__holder.sender:first-child {
-                border-radius: 50px 45px 50px 12px !important;
+                border-radius: 50px 60px 50px 6px !important;
             }
 
             .bubbles__con>.mess__holder.sender:nth-last-child(1) {
                 margin-bottom: 0 !important;
-                border-radius: 12px 50px 50px 45px !important;
+                border-radius: 6px 50px 50px 60px !important;
             }
 
             .long__messages {
@@ -119,6 +119,7 @@
             }
 
             .sender.long__messages {
+                padding: 6px 12px !important;
                 border-radius: 6px 12px 12px 6px !important;
             }
 
@@ -135,21 +136,21 @@
 
             <div class="bubbles__con">
                 <div class="mess__holder">
-                    <p>Hi there!</p>
+                    <span>Hi there!</span>
                 </div>
                 <div class="mess__holder">
-                    <p>Are you creating chat app?</p>
+                    <span>Are you creating chat app?</span>
                 </div>
                 <div class="mess__holder long__messages">
-                    <p>This is a simple chat bubbles component.</p>
+                    <span>This is a simple chat bubbles component.</span>
                 </div>
                 <div class="mess__holder long__messages">
-                    <p>You can use this for building your chat box applications.
+                    <span>You can use this for building your chat box applications.
                         This created using HTML and CSS only!
-                    </p>
+                    </span>
                 </div>
                 <div class="mess__holder">
-                    <p>Enjoy!</p>
+                    <span>Enjoy!</span>
                 </div>
             </div>
             <span class="mess__del" aria-label="Delivered" aria-roledescription="Status icon" title="Delivered"><svg
@@ -164,21 +165,20 @@
 
             <div class="bubbles__con">
                 <div class="mess__holder sender">
-                    <p>This is great!</p>
-                </div>
-                <div class="mess__holder sender long__messages">
-                    <p>Is this created using HTML and CSS
-                        only? this is so cool!
-                    </p>
+                    <span>This is great!</span>
                 </div>
                 <div class="mess__holder sender">
-                    <p>Thanks man!</p>
+                    <span>This is cool man! I will use this.
+                    </span>
+                </div>
+                <div class="mess__holder sender">
+                    <span>Thanks man!</span>
                 </div>
             </div>
 
             <div class="bubbles__con">
                 <div class="mess__holder">
-                    <p>Cool!</p>
+                    <span>Cool!</span>
                 </div>
             </div>
             <span class="mess__del" aria-label="Delivered" aria-roledescription="Status icon" title="Delivered"><svg
